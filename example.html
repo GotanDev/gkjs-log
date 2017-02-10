@@ -10,6 +10,8 @@
 				<p>Open browser debugger and refresh page to see result</p>
 			</div>
 		</div>
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script type="text/javascript" src="log.js"></script>
 
 		<script type="text/javascript">
@@ -27,12 +29,13 @@
 				}
 			};
 
-			/* Calls examples. */
-			logger.trace("test trace");
-			logger.debug("test debug");
-			logger.info("test info");
-			logger.warn("test warn");
-			logger.error("test error");
+			jQuery(document).ready(function(){
+				logger.trace("test trace");
+				logger.debug("test debug");
+				logger.info("test info");
+				logger.warn("test warn");
+				logger.error("test error");
+			});
 		</script>
 	</body>
 </html>

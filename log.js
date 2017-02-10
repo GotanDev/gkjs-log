@@ -1,5 +1,5 @@
 /** Logging management for JS Application
- * 
+	 * 
  * Built by freelance software craftmans network : 
  * @see http://gotan.io
  * 
@@ -113,40 +113,40 @@ var logger = {
 		}
 	}, 
 	disclaimer: function(){
-		if (logger.activeLevel() > 3) {
-			try {
-				if (typeof _config.logger.messages != undefined) {
-					console.log("%c" + __("AppTitle"), "font-size: 30pt; color:orange");
-					console.log("%cSTOP !", "font-size: 26pt;color:red")
-					console.log("%c" + __("Console Warning"), "font-size: 12pt;")
-					
-				} else if (typeof __ == "function") { 
-					console.log("%c" + __("AppTitle"), "font-size: 30pt; color:orange");
-					console.log("%cSTOP !", "font-size: 26pt;color:red")
-					console.log("%c" + __("Console Warning"), "font-size: 12pt;")
-				} else {
-					console.log("%cSTOP !", "font-size: 26pt;color:red")
-					console.log("%c" +"Console is browser feature designed for web developpers. \nIf you have been invited to type something here, you have do it in your own responsability. It can be hacking purpose and illegal.", "font-size: 12pt;")
-				}
-			} catch (e) {
-				setTimeout(function(){
-					logger.disclaimer();
-				},500);
+		if(!_config.logger.disclaimer) {
+			return;
+		}
+		try {
+			if (typeof _config.logger.messages != undefined) {
+				console.log("%c" + _config.logger.messages.appTitle, "font-size: 30pt; color:orange");
+				console.log("%cSTOP !", "font-size: 26pt;color:red")
+				console.log("%c" + _config.logger.messages.consoleWarning, "font-size: 12pt;")
+				
+			} else if (typeof __ == "function") { 
+				console.log("%c" + __("AppTitle"), "font-size: 30pt; color:orange");
+				console.log("%cSTOP !", "font-size: 26pt;color:red")
+				console.log("%c" + __("Console Warning"), "font-size: 12pt;")
+			} else {
+				console.log("%cSTOP !", "font-size: 26pt;color:red")
+				console.log("%c" +"Console is browser feature designed for web developpers. \nIf you have been invited to type something here, you have do it in your own responsability. It can be hacking purpose and illegal.", "font-size: 12pt;")
 			}
-		}	
+		} catch (e) {
+			setTimeout(function(){
+				logger.disclaimer();
+			},500);
+		}
 	}
 };
-if(_config.logger.disclaimer) {
-	if (typeof jQuery == "function") {
-		/* If jQuery is available, we use ready event, with is more complex than simple DomContentLoaded.*/
-		jQuery(document).on("ready", function(){
-			logger.disclaimer();
-		});
-	} else {
-		document.addEventListener("DOMContentLoaded", function(event) { 
-			logger.disclaimer();
-		});
-	}
+
+if (typeof jQuery == "function") {
+	/* If jQuery is available, we use ready event, with is more complex than simple DomContentLoaded.*/
+	jQuery(document).ready(function(){
+		logger.disclaimer();
+	});
+} else {
+	document.addEventListener("DOMContentLoaded", function(event) { 
+		logger.disclaimer();
+	});
 }
 
 

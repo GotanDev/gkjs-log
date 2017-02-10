@@ -117,7 +117,7 @@ var logger = {
 			return;
 		}
 		try {
-			if (typeof _config.logger.messages != undefined) {
+			if (typeof _config.logger.messages != "undefined") {
 				console.log("%c" + _config.logger.messages.appTitle, "font-size: 30pt; color:orange");
 				console.log("%cSTOP !", "font-size: 26pt;color:red")
 				console.log("%c" + _config.logger.messages.consoleWarning, "font-size: 12pt;")

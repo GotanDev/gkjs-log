@@ -86,7 +86,9 @@ var _config = {
 
 You can activate logger in production environment just by typing following instruction
 
-``` logger.activeDebugMode()```
+```javascript
+logger.activeDebugMode() 
+```
 
 Usefull for bug analysis in production environments.
 

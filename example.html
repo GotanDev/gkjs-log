@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>GKJS Logger Example</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="jumbotron">
+				<h1>GKJS Logger Example</h1>
+				<p>Open browser debugger and refresh page to see result</p>
+			</div>
+		</div>
+		<script type="text/javascript" src="log.js"></script>
+
+		<script type="text/javascript">
+
+			/* Logger Configuration */
+			var _config = {
+				debug : true, 
+				logger: {
+					level: 1, 
+					disclaimer: true, 
+					messages:{
+						appTitle: "GKJS Logger Example", 
+						consoleWarning: "Be careful with debugger using"
+					}
+				}
+			};
+
+			/* Calls examples. */
+			logger.trace("test trace");
+			logger.debug("test debug");
+			logger.info("test info");
+			logger.warn("test warn");
+			logger.error("test error");
+		</script>
+	</body>
+</html>

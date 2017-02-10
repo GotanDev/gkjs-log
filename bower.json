@@ -1,0 +1,28 @@
+{
+  "name": "gkjs-logger",
+  "description": "Simple Javascript logger",
+  "main": [
+    "log.min.js"
+  ],
+  "dependencies": {  },
+  "devDependencies": {},
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "logging",
+    "ops"
+  ],
+  "authors": [
+    "Damien Cuvillier <damien@gotan.io>"
+  ],
+  "license": "Apache2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": false
+}

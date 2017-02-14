@@ -141,11 +141,15 @@ var logger = {
 if (typeof jQuery == "function") {
 	/* If jQuery is available, we use ready event, with is more complex than simple DomContentLoaded.*/
 	jQuery(document).ready(function(){
-		logger.disclaimer();
+		setTimeout(function(){
+			logger.disclaimer();
+		},1500);
 	});
 } else {
 	document.addEventListener("DOMContentLoaded", function(event) { 
-		logger.disclaimer();
+		setTimeout(function(){
+			logger.disclaimer();
+		},1500);
 	});
 }
 

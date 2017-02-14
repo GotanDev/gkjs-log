@@ -4,7 +4,8 @@
   "main": [
     "log.min.js"
   ],
-  "dependencies": {  },
+  "dependencies": {  
+  },
   "devDependencies": {},
   "moduleType": [
     "globals"

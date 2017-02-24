@@ -113,7 +113,7 @@ var logger = {
 		}
 	}, 
 	disclaimer: function(){
-		if(!_config.logger.disclaimer) {
+		if(!_config || ! _config.logger || !_config.logger.disclaimer) {
 			return;
 		}
 		try {

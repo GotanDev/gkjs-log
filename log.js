@@ -8,6 +8,7 @@
  * @license Apache2
  */
 var logger = {
+	
 	active: function(){
 		var result =  
 			_config != null

@@ -5,6 +5,7 @@
     "log.min.js"
   ],
   "dependencies": {  
+    "gkjs-util":"~1.0"
   },
   "devDependencies": {},
   "moduleType": [

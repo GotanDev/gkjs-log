@@ -3,7 +3,7 @@
  * Built by freelance software craftmans network : 
  * @see http://gotan.io
  * 
- * @version 1.1.1
+ * @version 1.2.2
  * @author Damien Cuvillier <damien@gotan.io>
  * @license Apache2
  */

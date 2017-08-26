@@ -3,7 +3,7 @@
  * Built by freelance software craftmans network : 
  * @see http://gotan.io
  * 
- * @version 1.0
+ * @version 1.1.1
  * @author Damien Cuvillier <damien@gotan.io>
  * @license Apache2
  */
@@ -36,7 +36,7 @@ var logger = {
 			var additionnalAttr = "color: #777; text-align:right;float:right;font-size: 6pt;";
 			switch(level){
 				case "debug": 
-					console.debug(message,additionnalAttr);
+					console.log(message,additionnalAttr);
 					break;
 				case "info":
 					console.info(message,additionnalAttr);
